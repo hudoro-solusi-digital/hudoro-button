@@ -1,0 +1,131 @@
+.hudoro-button {
+  all: unset;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* HOVER DANI GANTENG STATE */
+.hudoro-button-solid:hover {
+  box-shadow: 0px 8px 20px 0px rgba(28, 35, 201, 0.3);
+}
+.hudoro-button-outline:hover {
+  box-shadow: 0px 8px 20px 0px rgba(28, 35, 201, 0.3);
+}
+.hudoro-button-link:hover {
+  box-shadow: 0px 8px 20px 0px rgba(28, 35, 201, 0.3);
+  border: 1.5px solid rgba(28, 35, 201, 0.3) !important;
+}
+
+/* DISABLED DANI GANTENG STATE */
+.hudoro-button-solid:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  background-color: #e5e7eb !important;
+  border-color: transparent !important;
+  color: #6b7280 !important;
+}
+.hudoro-button-outline:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  background-color: transparent !important;
+  border-color: #6b7280 !important;
+  color: #6b7280 !important;
+}
+.hudoro-button-link:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #6b7280 !important;
+}
+
+/* HUORO BUTTON SIZE */
+.hudoro-button-xs {
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.hudoro-button-sm {
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.hudoro-button-md {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.hudoro-button-lg {
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* HUDORO BUTTON TYPE */
+/* -> solid */
+.hudoro-button-solid.hudoro-button-default {
+  border: 1.5px solid #1e40af;
+  background-color: #1e40af;
+  color: #f9fafb;
+}
+.hudoro-button-solid.hudoro-button-success {
+  border: 1.5px solid #22c55e;
+  background-color: #22c55e;
+  color: #f9fafb;
+}
+.hudoro-button-solid.hudoro-button-danger {
+  border: 1.5px solid #ef4444;
+  background-color: #ef4444;
+  color: #f9fafb;
+}
+.hudoro-button-solid.hudoro-button-warning {
+  border: 1.5px solid #eab308;
+  background-color: #eab308;
+  color: #f9fafb;
+}
+/* -> outline */
+.hudoro-button-outline.hudoro-button-default {
+  border: 1.5px solid #1e40af;
+  background-color: transparent;
+  color: #1e40af;
+}
+.hudoro-button-outline.hudoro-button-success {
+  border: 1.5px solid #22c55e;
+  background-color: transparent;
+  color: #22c55e;
+}
+.hudoro-button-outline.hudoro-button-danger {
+  border: 1.5px solid #ef4444;
+  background-color: transparent;
+  color: #ef4444;
+}
+.hudoro-button-outline.hudoro-button-warning {
+  border: 1.5px solid #eab308;
+  background-color: transparent;
+  color: #eab308;
+}
+/* -> link */
+.hudoro-button-link.hudoro-button-default {
+  border: 1.5px solid transparent;
+  background-color: transparent;
+  color: #1e40af;
+}
+.hudoro-button-link.hudoro-button-success {
+  border: 1.5px solid transparent;
+  background-color: transparent;
+  color: #22c55e;
+}
+.hudoro-button-link.hudoro-button-danger {
+  border: 1.5px solid transparent;
+  background-color: transparent;
+  color: #ef4444;
+}
+.hudoro-button-link.hudoro-button-warning {
+  border: 1.5px solid transparent;
+  background-color: transparent;
+  color: #eab308;
+}
