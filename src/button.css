@@ -2,41 +2,45 @@
   all: unset;
   cursor: pointer;
   transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.21px;
 }
 
-/* HOVER DANI GANTENG STATE */
+/* HOVER  STATE */
 .hudoro-button-solid:hover {
   box-shadow: 0px 8px 20px 0px rgba(28, 35, 201, 0.3);
 }
 .hudoro-button-outline:hover {
   box-shadow: 0px 8px 20px 0px rgba(28, 35, 201, 0.3);
 }
-.hudoro-button-link:hover {
+button.hudoro-button-link:hover {
   box-shadow: 0px 8px 20px 0px rgba(28, 35, 201, 0.3);
-  border: 1.5px solid rgba(28, 35, 201, 0.3) !important;
+  border: 1.5px solid rgba(28, 35, 201, 0.3);
 }
 
-/* DISABLED DANI GANTENG STATE */
-.hudoro-button-solid:disabled {
+/* DISABLED  STATE */
+button.hudoro-button-solid:disabled {
   box-shadow: none;
   cursor: not-allowed;
-  background-color: #e5e7eb !important;
-  border-color: transparent !important;
-  color: #6b7280 !important;
+  background-color: #e5e7eb;
+  border-color: transparent;
+  color: #6b7280;
 }
-.hudoro-button-outline:disabled {
+button.hudoro-button-outline:disabled {
   box-shadow: none;
   cursor: not-allowed;
-  background-color: transparent !important;
-  border-color: #6b7280 !important;
-  color: #6b7280 !important;
+  background-color: transparent;
+  border-color: #6b7280;
+  color: #6b7280;
 }
-.hudoro-button-link:disabled {
+button.hudoro-button-link:disabled {
   box-shadow: none;
   cursor: not-allowed;
-  background-color: transparent !important;
-  border-color: transparent !important;
-  color: #6b7280 !important;
+  background-color: transparent;
+  border-color: transparent;
+  color: #6b7280;
 }
 
 /* HUORO BUTTON SIZE */
@@ -128,4 +132,10 @@
   border: 1.5px solid transparent;
   background-color: transparent;
   color: #eab308;
+}
+
+/* Full width */
+.hudoro-button-width-full {
+  width: 100%;
+  text-align: center;
 }

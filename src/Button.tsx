@@ -1,43 +1,76 @@
-import React, {CSSProperties, ReactNode} from "react";
+import React, {CSSProperties, ReactNode, SVGProps} from "react";
 import "./button.css";
 
-type TSize = "xs" | "sm" | "md" | "lg";
-type TVariant = "default" | "success" | "danger" | "warning";
-type TType = "solid" | "outline" | "link";
+export type TSize = "xs" | "sm" | "md" | "lg";
+export type TVariant = "default" | "success" | "danger" | "warning";
+export type TType = "solid" | "outline" | "link";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick: () => void;
   children: ReactNode;
   style?: CSSProperties;
   size?: TSize;
   variant?: TVariant;
   buttonType?: TType;
+  fullWidth?: boolean;
+  LeftIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  RightIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  onClick,
   children,
-  size = "sm",
+  size = "md",
   variant = "default",
   buttonType = "solid",
+  fullWidth = false,
+  LeftIcon,
+  RightIcon,
   ...rest
 }) => {
   return (
     <button
-      className={`hudoro-button ${bindingClassName(size, variant, buttonType)}`}
+      className={`hudoro-button ${bindingClassName(
+        size,
+        variant,
+        buttonType,
+        fullWidth
+      )}`}
       {...rest}
-      onClick={onClick}
     >
+      {LeftIcon && (
+        <LeftIcon
+          width={rederIconWidth(size)}
+          color={rest.disabled ? "#6B7280" : "#F9FAFB"}
+        />
+      )}
       {children}
+      {RightIcon && (
+        <RightIcon
+          width={rederIconWidth(size)}
+          color={rest.disabled ? "#6B7280" : "#F9FAFB"}
+        />
+      )}
     </button>
   );
+};
+
+const rederIconWidth = (size: TSize) => {
+  if (size === "xs") {
+    return 16;
+  } else if (size === "sm") {
+    return 16;
+  } else if (size === "md") {
+    return 20;
+  } else if (size === "lg") {
+    return 20;
+  }
 };
 
 const bindingClassName = (
   size: TSize,
   variant: TVariant,
-  buttonType: TType
+  buttonType: TType,
+  fullWidth: boolean
 ) => {
   const allProps = [];
   if (size) {
@@ -48,6 +81,9 @@ const bindingClassName = (
   }
   if (buttonType) {
     allProps.push(`hudoro-button-${buttonType}`);
+  }
+  if (fullWidth) {
+    allProps.push(`hudoro-button-width-full`);
   }
 
   return allProps.join(" ");
