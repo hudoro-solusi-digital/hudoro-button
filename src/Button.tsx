@@ -1,5 +1,17 @@
 import React, {CSSProperties, ReactNode, SVGProps} from "react";
-import "./button.css";
+import styles from "./button.module.css?raw";
+
+const styleId = 'hudoro-button-styles';
+const injectStyles = (css: string) => {
+  if (!document.getElementById(styleId)) {
+    const styleElement = document.createElement('style');
+    styleElement.id = styleId;
+    styleElement.textContent = css;
+    document.head.appendChild(styleElement);
+  }
+};
+
+injectStyles(styles);
 
 export type TSize = "xs" | "sm" | "md" | "lg";
 export type TVariant = "default" | "success" | "danger" | "warning";
