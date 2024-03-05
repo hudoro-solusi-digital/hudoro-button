@@ -21,7 +21,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
+  // children: ReactNode;
   style?: CSSProperties;
   size?: TSize;
   variant?: TVariant;
@@ -61,7 +61,7 @@ export const Button: React.FC<ButtonProps> = ({
           /> */}
           {React.cloneElement(leftIcon, {
             width: rederIconWidth(size),
-            color: rest.disabled ? "#6B7280" : "#F9FAFB",
+            color: rest.disabled ? "#6B7280" : "inherit",
           })}
         </>
       )}
@@ -70,7 +70,7 @@ export const Button: React.FC<ButtonProps> = ({
         <>
           {React.cloneElement(rightIcon, {
             width: rederIconWidth(size),
-            color: rest.disabled ? "#6B7280" : "#F9FAFB",
+            color: rest.disabled ? "#6B7280" : "inherit",
           })}
         </>
         // <RightIcon
