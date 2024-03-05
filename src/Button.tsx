@@ -1,5 +1,6 @@
 import React, {CSSProperties, ReactNode} from "react";
 import styles from "./button.module.css?raw";
+import {ButtonProps, TSize, TType, TVariant} from "./types";
 
 const styleId = "hudoro-button-styles";
 const injectStyles = (css: string) => {
@@ -13,25 +14,7 @@ const injectStyles = (css: string) => {
 
 injectStyles(styles);
 
-export type TSize = "xs" | "sm" | "md" | "lg";
-export type TVariant = "default" | "success" | "danger" | "warning";
-export type TType = "solid" | "outline" | "link";
-
 export interface IconProps extends React.SVGProps<SVGSVGElement> {}
-
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  // children: ReactNode;
-  style?: CSSProperties;
-  size?: TSize;
-  variant?: TVariant;
-  buttonType?: TType;
-  fullWidth?: boolean;
-  // LeftIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
-  leftIcon?: React.ReactElement<IconProps>;
-  rightIcon?: React.ReactElement<IconProps>;
-  // RightIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
-}
 
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -41,16 +24,19 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   leftIcon,
   rightIcon,
+  backgroundColor,
+  textColor,
+  borderColor,
   ...rest
 }) => {
   return (
     <button
-      className={`hudoro-button ${bindingClassName(
-        size,
-        variant,
-        buttonType,
-        fullWidth
-      )}`}
+      className={`hudoro-button ${
+        backgroundColor ? `hudoro-button-background-${backgroundColor}` : ""
+      } 
+      ${borderColor ? `hudoro-button-border-${borderColor}` : ""}
+      ${textColor ? `hudoro-button-text-${textColor}` : ""}
+      ${bindingClassName(size, variant, buttonType, fullWidth)}`}
       {...rest}
     >
       {leftIcon && (

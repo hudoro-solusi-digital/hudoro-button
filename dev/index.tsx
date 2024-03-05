@@ -22,8 +22,6 @@ const App = () => (
       onClick={() => alert("oke")}
       leftIcon={<CustomIcon />}
       rightIcon={<CustomIcon />}
-      buttonType="link"
-      variant="warning"
     >
       Dani Ganteng
     </Button>
