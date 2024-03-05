@@ -17,15 +17,18 @@ const CustomIcon: React.FC<SVGProps<SVGSVGElement>> = (props) => {
 const App = () => (
   <div>
     <h1>Testing Button Component</h1>
-    <Button
-      size="sm"
-      onClick={() => alert("oke")}
-      LeftIcon={CustomIcon}
-      RightIcon={CustomIcon}
-      buttonType="solid"
-    >
-      Dani Ganteng
-    </Button>
+    <div>
+      <Button
+        size="lg"
+        onClick={() => alert("oke")}
+        leftIcon={<CustomIcon />}
+        rightIcon={<CustomIcon />}
+        buttonType="solid"
+        fullWidth
+      >
+        Dani Ganteng
+      </Button>
+    </div>
   </div>
 );
 

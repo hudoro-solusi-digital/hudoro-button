@@ -1,10 +1,10 @@
-import React, {CSSProperties, ReactNode, SVGProps} from "react";
+import React, {CSSProperties, ReactNode} from "react";
 import styles from "./button.module.css?raw";
 
-const styleId = 'hudoro-button-styles';
+const styleId = "hudoro-button-styles";
 const injectStyles = (css: string) => {
   if (!document.getElementById(styleId)) {
-    const styleElement = document.createElement('style');
+    const styleElement = document.createElement("style");
     styleElement.id = styleId;
     styleElement.textContent = css;
     document.head.appendChild(styleElement);
@@ -17,6 +17,8 @@ export type TSize = "xs" | "sm" | "md" | "lg";
 export type TVariant = "default" | "success" | "danger" | "warning";
 export type TType = "solid" | "outline" | "link";
 
+export interface IconProps extends React.SVGProps<SVGSVGElement> {}
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -25,8 +27,10 @@ export interface ButtonProps
   variant?: TVariant;
   buttonType?: TType;
   fullWidth?: boolean;
-  LeftIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
-  RightIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  // LeftIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  leftIcon?: React.ReactElement<IconProps>;
+  rightIcon?: React.ReactElement<IconProps>;
+  // RightIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -35,8 +39,8 @@ export const Button: React.FC<ButtonProps> = ({
   variant = "default",
   buttonType = "solid",
   fullWidth = false,
-  LeftIcon,
-  RightIcon,
+  leftIcon,
+  rightIcon,
   ...rest
 }) => {
   return (
@@ -49,18 +53,30 @@ export const Button: React.FC<ButtonProps> = ({
       )}`}
       {...rest}
     >
-      {LeftIcon && (
-        <LeftIcon
-          width={rederIconWidth(size)}
-          color={rest.disabled ? "#6B7280" : "#F9FAFB"}
-        />
+      {leftIcon && (
+        <>
+          {/* <LeftIcon
+            width={rederIconWidth(size)}
+            color={rest.disabled ? "#6B7280" : "#F9FAFB"}
+          /> */}
+          {React.cloneElement(leftIcon, {
+            width: rederIconWidth(size),
+            color: rest.disabled ? "#6B7280" : "#F9FAFB",
+          })}
+        </>
       )}
       {children}
-      {RightIcon && (
-        <RightIcon
-          width={rederIconWidth(size)}
-          color={rest.disabled ? "#6B7280" : "#F9FAFB"}
-        />
+      {rightIcon && (
+        <>
+          {React.cloneElement(rightIcon, {
+            width: rederIconWidth(size),
+            color: rest.disabled ? "#6B7280" : "#F9FAFB",
+          })}
+        </>
+        // <RightIcon
+        //   width={rederIconWidth(size)}
+        //   color={rest.disabled ? "#6B7280" : "#F9FAFB"}
+        // />
       )}
     </button>
   );
