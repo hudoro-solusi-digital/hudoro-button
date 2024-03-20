@@ -124,23 +124,23 @@ button.hudoro-button-link:hover {
 button.hudoro-button-solid:disabled {
   box-shadow: none;
   cursor: not-allowed;
-  background-color: #e5e7eb;
-  border-color: transparent;
-  color: #6b7280;
+  background-color: #e5e7eb !important;
+  border-color: transparent !important;
+  color: #6b7280 !important;
 }
 button.hudoro-button-outline:disabled {
   box-shadow: none;
   cursor: not-allowed;
-  background-color: transparent;
-  border-color: #6b7280;
-  color: #6b7280;
+  background-color: transparent !important;
+  border-color: #6b7280 !important;
+  color: #6b7280 !important;
 }
 button.hudoro-button-link:disabled {
   box-shadow: none;
   cursor: not-allowed;
-  background-color: transparent;
-  border-color: transparent;
-  color: #6b7280;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #6b7280 !important;
 }
 
 /* HUORO BUTTON SIZE */
