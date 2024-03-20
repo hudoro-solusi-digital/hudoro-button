@@ -1,6 +1,6 @@
-import React, {CSSProperties, ReactNode} from "react";
+import React from "react";
 import styles from "./button.module.css?raw";
-import {ButtonProps, TSize, TType, TVariant} from "./types";
+import {ButtonProps, Color, TSize, TType, TVariant} from "./types";
 
 const styleId = "hudoro-button-styles";
 const injectStyles = (css: string) => {
@@ -13,8 +13,6 @@ const injectStyles = (css: string) => {
 };
 
 injectStyles(styles);
-
-export interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -31,20 +29,20 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`hudoro-button ${
-        backgroundColor ? `hudoro-button-background-${backgroundColor}` : ""
-      } 
-      ${borderColor ? `hudoro-button-border-${borderColor}` : ""}
-      ${textColor ? `hudoro-button-text-${textColor}` : ""}
-      ${bindingClassName(size, variant, buttonType, fullWidth)}`}
+      className={`hudoro-button 
+      ${bindingClassName(
+        size,
+        variant,
+        buttonType,
+        fullWidth,
+        backgroundColor,
+        borderColor,
+        textColor
+      )}`}
       {...rest}
     >
       {leftIcon && (
         <>
-          {/* <LeftIcon
-            width={rederIconWidth(size)}
-            color={rest.disabled ? "#6B7280" : "#F9FAFB"}
-          /> */}
           {React.cloneElement(leftIcon, {
             width: rederIconWidth(size),
             color: rest.disabled ? "#6B7280" : "inherit",
@@ -59,10 +57,6 @@ export const Button: React.FC<ButtonProps> = ({
             color: rest.disabled ? "#6B7280" : "inherit",
           })}
         </>
-        // <RightIcon
-        //   width={rederIconWidth(size)}
-        //   color={rest.disabled ? "#6B7280" : "#F9FAFB"}
-        // />
       )}
     </button>
   );
@@ -84,7 +78,10 @@ const bindingClassName = (
   size: TSize,
   variant: TVariant,
   buttonType: TType,
-  fullWidth: boolean
+  fullWidth: boolean,
+  backgroundColor?: Color,
+  borderColor?: Color,
+  textColor?: Color
 ) => {
   const allProps = [];
   if (size) {
@@ -98,6 +95,15 @@ const bindingClassName = (
   }
   if (fullWidth) {
     allProps.push(`hudoro-button-width-full`);
+  }
+  if (backgroundColor) {
+    allProps.push(`hudoro-button-background-${backgroundColor}`);
+  }
+  if (borderColor) {
+    allProps.push(`hudoro-button-border-${borderColor}`);
+  }
+  if (textColor) {
+    allProps.push(`hudoro-button-text-${textColor}`);
   }
 
   return allProps.join(" ");
