@@ -1,5 +1,4 @@
 import {CSSProperties} from "react";
-import {IconProps} from "./Button";
 
 export const ColorSchemeGenerator = [
   {
@@ -124,6 +123,7 @@ export type Color = (typeof ColorConst)[number];
 export type TSize = "xs" | "sm" | "md" | "lg";
 export type TVariant = "default" | "success" | "danger" | "warning";
 export type TType = "solid" | "outline" | "link";
+export interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
