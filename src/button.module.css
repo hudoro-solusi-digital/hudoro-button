@@ -171,21 +171,13 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   min-width: max-content;
+  justify-content: center;
 }
 
 /* Full width */
 .hudoro-button-width-full {
   width: 100%;
   text-align: center;
-}
-.hudoro-button-align-start {
-  justify-content: flex-start;
-}
-.hudoro-button-align-center {
-  justify-content: center;
-}
-.hudoro-button-align-end {
-  justify-content: flex-end;
 }
 
 .hudoro-button-rounded {

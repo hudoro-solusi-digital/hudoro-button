@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./button.module.css?raw";
-import {ButtonProps, Color, TSize, TType, TVariant} from "./types";
+import {ButtonProps, Size} from "./types";
 
 const styleId = "hudoro-button-styles";
 const injectStyles = (css: string) => {
@@ -16,54 +16,53 @@ injectStyles(styles);
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  Size = "md",
-  FullWidth = false,
-  IconLeft,
-  IconRight,
-  Primary = false,
-  Secondary = false,
-  Tertiary = false,
-  Quaternary = false,
-  Link = false,
-  Success = false,
-  Danger = false,
-  Warning = false,
-  Corner = "Rounded",
-  Align = "Center",
+  size = "md",
+  fullWidth = false,
+  iconLeft,
+  iconRight,
+  primary = false,
+  secondary = false,
+  tertiary = false,
+  quaternary = false,
+  link = false,
+  success = false,
+  danger = false,
+  warning = false,
+  corner = "rounded",
   ...rest
 }) => {
   return (
     <button
       className={`hudoro-button 
       ${bindingClassName(
-        Size,
-        Primary,
-        Secondary,
-        Tertiary,
-        Quaternary,
-        Link,
-        Success,
-        Danger,
-        Warning,
-        Corner,
-        FullWidth,
-        Align
+        size,
+        primary,
+        secondary,
+        tertiary,
+        quaternary,
+        link,
+        success,
+        danger,
+        warning,
+        corner,
+        fullWidth
       )}`}
       {...rest}
+      style={{}}
     >
-      {IconLeft && (
+      {iconLeft && (
         <>
-          {React.cloneElement(IconLeft, {
-            width: rederIconWidth(Size),
+          {React.cloneElement(iconLeft, {
+            width: rederIconWidth(size),
             color: "inherit",
           })}
         </>
       )}
       {children}
-      {IconRight && (
+      {iconRight && (
         <>
-          {React.cloneElement(IconRight, {
-            width: rederIconWidth(Size),
+          {React.cloneElement(iconRight, {
+            width: rederIconWidth(size),
             color: "inherit",
           })}
         </>
@@ -72,7 +71,7 @@ export const Button: React.FC<ButtonProps> = ({
   );
 };
 
-const rederIconWidth = (size: TSize) => {
+const rederIconWidth = (size: Size) => {
   if (size === "xs") {
     return 16;
   } else if (size === "sm") {
@@ -85,7 +84,7 @@ const rederIconWidth = (size: TSize) => {
 };
 
 const bindingClassName = (
-  size: TSize,
+  size: Size,
   Primary: boolean,
   Secondary: boolean,
   Tertiary: boolean,
@@ -94,9 +93,8 @@ const bindingClassName = (
   Success: boolean,
   Danger: boolean,
   Warning: boolean,
-  Corner: ButtonProps["Corner"],
-  FullWidth: Boolean,
-  Align: ButtonProps["Align"]
+  Corner: ButtonProps["corner"],
+  FullWidth: Boolean
 ) => {
   const allProps = [];
   if (size) {
@@ -127,9 +125,5 @@ const bindingClassName = (
   if (FullWidth) {
     allProps.push(`hudoro-button-width-full`);
   }
-  if (Align) {
-    allProps.push(`hudoro-button-align-${Align.toLowerCase()}`);
-  }
-
   return allProps.join(" ");
 };

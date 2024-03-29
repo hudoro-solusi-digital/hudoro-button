@@ -42,71 +42,16 @@ const App = () => (
       <div style={{flex: "1"}}>
         <h3>ACTIVE BUTTON</h3>
       </div>
+
       <Button
         onClick={() => alert("oke")}
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
-      >
-        Dani Ganteng
-      </Button>
-      <Button
-        onClick={() => alert("oke")}
-        Secondary
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
-      >
-        Dani Ganteng
-      </Button>
-      <Button
-        onClick={() => alert("oke")}
-        Tertiary
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
-      >
-        Dani Ganteng
-      </Button>
-      <Button
-        onClick={() => alert("oke")}
-        Quaternary
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
-      >
-        Dani Ganteng
-      </Button>
-      <Button
-        onClick={() => alert("oke")}
-        Link
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
-      >
-        Dani Ganteng
-      </Button>
-      <Button
-        onClick={() => alert("oke")}
-        Success
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
-      >
-        Dani Ganteng
-      </Button>
-      <Button
-        onClick={() => alert("oke")}
-        Danger
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
-      >
-        Dani Ganteng
-      </Button>
-      <Button
-        onClick={() => alert("oke")}
-        Warning
-        IconLeft={<CustomIcon />}
-        IconRight={<CustomIcon />}
+        // IconLeft={<CustomIcon />}
+        // IconRight={<CustomIcon />}
       >
         Dani Ganteng
       </Button>
     </div>
-    <div
+    {/* <div
       style={{
         padding: "50px",
         display: "flex",
@@ -188,8 +133,8 @@ const App = () => (
       >
         Dani Ganteng
       </Button>
-    </div>
-    <div
+    </div> */}
+    {/* <div
       style={{
         padding: "50px",
         display: "flex",
@@ -271,7 +216,7 @@ const App = () => (
       >
         Dani Ganteng
       </Button>
-    </div>
+    </div> */}
   </>
 );
 
