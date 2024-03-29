@@ -16,45 +16,55 @@ injectStyles(styles);
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  size = "md",
-  variant = "default",
-  buttonType = "solid",
-  fullWidth = false,
-  leftIcon,
-  rightIcon,
-  backgroundColor,
-  textColor,
-  borderColor,
+  Size = "md",
+  FullWidth = false,
+  IconLeft,
+  IconRight,
+  Primary = false,
+  Secondary = false,
+  Tertiary = false,
+  Quaternary = false,
+  Link = false,
+  Success = false,
+  Danger = false,
+  Warning = false,
+  Corner = "Rounded",
+  Align = "Center",
   ...rest
 }) => {
   return (
     <button
       className={`hudoro-button 
       ${bindingClassName(
-        size,
-        variant,
-        buttonType,
-        fullWidth,
-        backgroundColor,
-        borderColor,
-        textColor
+        Size,
+        Primary,
+        Secondary,
+        Tertiary,
+        Quaternary,
+        Link,
+        Success,
+        Danger,
+        Warning,
+        Corner,
+        FullWidth,
+        Align
       )}`}
       {...rest}
     >
-      {leftIcon && (
+      {IconLeft && (
         <>
-          {React.cloneElement(leftIcon, {
-            width: rederIconWidth(size),
-            color: rest.disabled ? "#6B7280" : "inherit",
+          {React.cloneElement(IconLeft, {
+            width: rederIconWidth(Size),
+            color: "inherit",
           })}
         </>
       )}
       {children}
-      {rightIcon && (
+      {IconRight && (
         <>
-          {React.cloneElement(rightIcon, {
-            width: rederIconWidth(size),
-            color: rest.disabled ? "#6B7280" : "inherit",
+          {React.cloneElement(IconRight, {
+            width: rederIconWidth(Size),
+            color: "inherit",
           })}
         </>
       )}
@@ -76,34 +86,49 @@ const rederIconWidth = (size: TSize) => {
 
 const bindingClassName = (
   size: TSize,
-  variant: TVariant,
-  buttonType: TType,
-  fullWidth: boolean,
-  backgroundColor?: Color,
-  borderColor?: Color,
-  textColor?: Color
+  Primary: boolean,
+  Secondary: boolean,
+  Tertiary: boolean,
+  Quaternary: boolean,
+  Link: boolean,
+  Success: boolean,
+  Danger: boolean,
+  Warning: boolean,
+  Corner: ButtonProps["Corner"],
+  FullWidth: Boolean,
+  Align: ButtonProps["Align"]
 ) => {
   const allProps = [];
   if (size) {
     allProps.push(`hudoro-button-${size}`);
   }
-  if (variant) {
-    allProps.push(`hudoro-button-${variant}`);
+  if (Primary) {
+    allProps.push(`hudoro-button-primary`);
+  } else if (Secondary) {
+    allProps.push(`hudoro-button-secondary`);
+  } else if (Tertiary) {
+    allProps.push(`hudoro-button-tertiary`);
+  } else if (Quaternary) {
+    allProps.push(`hudoro-button-quarternary`);
+  } else if (Link) {
+    allProps.push(`hudoro-button-link`);
+  } else if (Success) {
+    allProps.push(`hudoro-button-success`);
+  } else if (Danger) {
+    allProps.push(`hudoro-button-danger`);
+  } else if (Warning) {
+    allProps.push(`hudoro-button-warning`);
+  } else {
+    allProps.push(`hudoro-button-primary`);
   }
-  if (buttonType) {
-    allProps.push(`hudoro-button-${buttonType}`);
+  if (Corner) {
+    allProps.push(`hudoro-button-${Corner.toLowerCase()}`);
   }
-  if (fullWidth) {
+  if (FullWidth) {
     allProps.push(`hudoro-button-width-full`);
   }
-  if (backgroundColor) {
-    allProps.push(`hudoro-button-background-${backgroundColor}`);
-  }
-  if (borderColor) {
-    allProps.push(`hudoro-button-border-${borderColor}`);
-  }
-  if (textColor) {
-    allProps.push(`hudoro-button-text-${textColor}`);
+  if (Align) {
+    allProps.push(`hudoro-button-align-${Align.toLowerCase()}`);
   }
 
   return allProps.join(" ");

@@ -127,17 +127,18 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  // children: ReactNode;
-  style?: CSSProperties;
-  size?: TSize;
-  variant?: TVariant;
-  buttonType?: TType;
-  fullWidth?: boolean;
-  // LeftIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
-  leftIcon?: React.ReactElement<IconProps>;
-  rightIcon?: React.ReactElement<IconProps>;
-  backgroundColor?: Color;
-  textColor?: Color;
-  borderColor?: Color;
-  // RightIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  Size?: TSize;
+  Primary?: boolean;
+  Secondary?: boolean;
+  Tertiary?: boolean;
+  Quaternary?: boolean;
+  Link?: boolean;
+  Success?: boolean;
+  Danger?: boolean;
+  Warning?: boolean;
+  Corner?: "Rounded" | "Circular";
+  FullWidth?: boolean;
+  IconLeft?: React.ReactElement<IconProps>;
+  IconRight?: React.ReactElement<IconProps>;
+  Align?: "Start" | "Center" | "End";
 }
