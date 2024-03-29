@@ -4,10 +4,22 @@ Hudoro Button is a strict and customizable button component for web development 
 
 ## Package instalation
 
-Instal package
+Instal package using pnpm
 
 ```bash
   pnpm add @hudoro/button
+```
+
+Instal package using yarn
+
+```bash
+  yarn add @hudoro/button
+```
+
+Instal package using npm
+
+```bash
+  npm i @hudoro/button
 ```
 
 import package to your project
@@ -22,7 +34,11 @@ import package to your project
 import {Button} from "@hudoro/button";
 
 function App() {
-  return <Button>Hudoro Button The Best Choices</Button>;
+  return (
+    <Button primary size="lg">
+      Hudoro Button The Best Choices
+    </Button>
+  );
 }
 ```
 
