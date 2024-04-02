@@ -2,6 +2,10 @@
 
 Hudoro Button is a strict and customizable button component for web development projects, designed for simplicity and adherence to strict design guidelines.
 
+## Screenshots
+
+![App Screenshot](https://github.com/primaramadhaniputra/image/blob/main/IButton.png)
+
 ## Package instalation
 
 Instal package using pnpm
