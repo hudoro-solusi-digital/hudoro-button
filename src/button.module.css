@@ -220,7 +220,7 @@
 /* BUTTON TYPE */
 /* PRIMARY */
 .hudoro-button-primary {
-  background-color: var(--hsd-ui-background-color-primary);
+  background-color: var(--hsd-ui-background-color-primary, "red");
   color: var(--hsd-ui-text-color-primary);
   border-color: var(--hsd-ui-border-color-primary);
 }
