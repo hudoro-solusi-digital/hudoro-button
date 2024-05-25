@@ -157,6 +157,30 @@
   /* Border radius */
   --hs-ui-border-rounded: 8px;
   --hs-ui-border-circular: 192px;
+
+  /* spacing */
+  --hsd-ui-spacing-1: 0.25rem; /* 4px */
+
+  /* border */
+  --hsd-ui-border: 1px;
+
+  /* font weight */
+  --hsd-ui-fontWeights-medium: 500;
+
+  /* height */
+  --hsd-ui-h-8: 2rem; /* 32px */
+  --hsd-ui-h-9: 2.25rem; /* 36px */
+  --hsd-ui-h-10: 2.5rem; /* 40px */
+  --hsd-ui-h-12: 3rem; /* 48px */
+
+  /* spacing */
+  --hsd-ui-spacing-2: 0.5rem; /* 8px */
+  --hsd-ui-spacing-4: 1rem; /* 16px */
+  --hsd-ui-spacing-6: 1.5rem; /* 24px */
+
+  /* font size */
+  --hsd-ui-fontSizes-sm: 0.875rem; /* 14px */
+  --hsd-ui-fontSizes-md: 1rem; /* 16px */
 }
 
 .hudoro-button {
@@ -165,11 +189,11 @@
   transition: 0.2s;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: var(--hsd-ui-spacing-1);
   /* letter-spacing: 0.21px; */
-  border: 1px solid;
+  border: var(--hsd-ui-border) solid;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: var(--hsd-ui-fontWeights-medium);
   min-width: max-content;
   justify-content: center;
 }
@@ -189,32 +213,32 @@
 
 /* HUORO BUTTON SIZE */
 .hudoro-button-xs {
-  height: 32px;
-  min-height: 32px;
-  max-height: 32px;
-  padding: 0 8px;
-  font-size: 14px;
+  height: var(--hsd-ui-h-8);
+  min-height: var(--hsd-ui-h-8);
+  max-height: var(--hsd-ui-h-8);
+  padding: 0 var(--hsd-ui-spacing-2);
+  font-size: var(--hsd-ui-fontSizes-sm);
 }
 .hudoro-button-sm {
-  height: 36px;
-  min-height: 36px;
-  max-height: 36px;
-  padding: 0 8px;
-  font-size: 14px;
+  height: var(--hsd-ui-h-9);
+  min-height: var(--hsd-ui-h-9);
+  max-height: var(--hsd-ui-h-9);
+  padding: 0 var(--hsd-ui-spacing-2);
+  font-size: var(--hsd-ui-fontSizes-sm);
 }
 .hudoro-button-md {
-  height: 40px;
-  min-height: 40px;
-  max-height: 40px;
-  padding: 0 16px;
-  font-size: 14px;
+  height: var(--hsd-ui-h-10);
+  min-height: var(--hsd-ui-h-10);
+  max-height: var(--hsd-ui-h-10);
+  padding: 0 var(--hsd-ui-spacing-4);
+  font-size: var(--hsd-ui-fontSizes-sm);
 }
 .hudoro-button-lg {
-  min-height: 48px;
-  max-height: 48px;
-  height: 48px;
-  padding: 0 24px;
-  font-size: 16px;
+  min-height: var(--hsd-ui-h-12);
+  max-height: var(--hsd-ui-h-12);
+  height: var(--hsd-ui-h-12);
+  padding: 0 var(--hsd-ui-spacing-6);
+  font-size: var(--hsd-ui-fontSizes-md);
 }
 
 /* BUTTON TYPE */
