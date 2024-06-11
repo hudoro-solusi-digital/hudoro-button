@@ -24,10 +24,34 @@ const App = () => (
       }}
     >
       <Button
+        size="xs"
         onClick={() => alert("oke")}
         iconLeft={<CustomIcon />}
         iconRight={<CustomIcon />}
-        disabled
+      >
+        primary
+      </Button>
+      <Button
+        size="sm"
+        onClick={() => alert("oke")}
+        iconLeft={<CustomIcon />}
+        iconRight={<CustomIcon />}
+      >
+        primary
+      </Button>
+      <Button
+        size="md"
+        onClick={() => alert("oke")}
+        iconLeft={<CustomIcon />}
+        iconRight={<CustomIcon />}
+      >
+        primary
+      </Button>
+      <Button
+        size="lg"
+        onClick={() => alert("oke")}
+        iconLeft={<CustomIcon />}
+        iconRight={<CustomIcon />}
       >
         primary
       </Button>
