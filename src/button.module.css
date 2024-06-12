@@ -173,7 +173,8 @@
   /* height */
   --hsd-ui-button-height-xs: var(--hsd-ui-h-8, 32px);
   --hsd-ui-button-height-sm: var(--hsd-ui-h-9, 36px);
-  --hsd-ui-button-height-md: var(--hsd-ui-h-10, 40px);
+  /* --hsd-ui-button-height-md: var(--hsd-ui-h-10, 40px); */
+  --hsd-ui-button-height-md: 38px;
   --hsd-ui-button-height-lg: var(--hsd-ui-h-12, 48px);
 
   /* font size */
