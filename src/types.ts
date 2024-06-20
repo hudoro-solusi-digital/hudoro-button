@@ -1,7 +1,7 @@
 export type Size = "xs" | "sm" | "md" | "lg";
 export type Variant = "default" | "success" | "danger" | "warning";
 export type Type = "solid" | "outline" | "link";
-export interface IconProps extends React.SVGProps<SVGSVGElement> {}
+export interface ButtonIconProps extends React.SVGProps<SVGSVGElement> {}
 
 export interface ButtonProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "style"> {
@@ -16,6 +16,6 @@ export interface ButtonProps
   warning?: boolean;
   corner?: "rounded" | "circular";
   fullWidth?: boolean;
-  iconLeft?: React.ReactElement<IconProps>;
-  iconRight?: React.ReactElement<IconProps>;
+  iconLeft?: React.ReactElement<ButtonIconProps>;
+  iconRight?: React.ReactElement<ButtonIconProps>;
 }
