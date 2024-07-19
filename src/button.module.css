@@ -22,9 +22,11 @@
   --hsd-ui-text-color-primary-active: rgb(255, 255, 255);
   --hsd-ui-shadow-primary-active: 0px 0px 0px 3px rgba(100, 181, 246, 0.28);
   /* disable */
-  --hsd-ui-background-color-primary-disable: rgba(201, 206, 204, 0.68);
-  --hsd-ui-border-color-primary-disable: rgba(201, 206, 204, 0.68);
-  --hsd-ui-text-color-primary-disable: rgba(120, 134, 127, 0.62);
+  /* --hsd-ui-background-color-primary-disable: rgba(201, 206, 204, 0.68); */
+  --hsd-ui-background-color-primary-disable: #dbdddc;
+  --hsd-ui-border-color-primary-disable: #dbdddc;
+  --hsd-ui-text-color-primary-disable: #7a8681;
+  /* --hsd-ui-text-color-primary-disable: rgba(120, 134, 127, 0.62); */
 
   /* SECONDARY */
   --hsd-ui-background-color-secondary: rgb(255, 254, 255);
