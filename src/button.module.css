@@ -44,9 +44,12 @@
   --hsd-ui-shadow-secondary-active: 0px 0px 0px 3px rgba(201, 206, 204, 0.28),
     0px 0px 0px -1px #f0f0f0;
   /* disable */
-  --hsd-ui-background-color-secondary-disable: rgba(201, 206, 204, 0.68);
+  --hsd-ui-background-color-secondary-disable: #dbdddc;
+  --hsd-ui-border-color-secondary-disable: #dbdddc;
+  --hsd-ui-text-color-secondary-disable: #7a8681;
+  /* --hsd-ui-background-color-secondary-disable: rgba(201, 206, 204, 0.68);
   --hsd-ui-border-color-secondary-disable: rgba(201, 206, 204, 0.68);
-  --hsd-ui-text-color-secondary-disable: rgba(120, 134, 127, 0.62);
+  --hsd-ui-text-color-secondary-disable: rgba(120, 134, 127, 0.62); */
 
   /* TERTIARY */
   --hsd-ui-background-color-tertiary: rgba(100, 181, 246, 0.21);

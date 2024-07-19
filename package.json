@@ -1,6 +1,6 @@
 {
   "name": "@hudoro/button",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Button component for Hudoro UI",
   "author": "Prawito Hudoro",
   "main": "dist/button.umd.js",
