@@ -27,34 +27,28 @@ const App = () => (
         size="xs"
         onClick={() => alert("oke")}
         iconLeft={<CustomIcon />}
-        iconRight={<CustomIcon />}
+        secondary
       >
-        primary
+        dani ganteng
       </Button>
       <Button
         size="sm"
         onClick={() => alert("oke")}
         iconLeft={<CustomIcon />}
-        iconRight={<CustomIcon />}
-      >
-        primary
-      </Button>
+        secondary
+      ></Button>
       <Button
         size="md"
         onClick={() => alert("oke")}
         iconLeft={<CustomIcon />}
-        iconRight={<CustomIcon />}
-      >
-        primary
-      </Button>
+        secondary
+      ></Button>
       <Button
         size="lg"
         onClick={() => alert("oke")}
         iconLeft={<CustomIcon />}
-        iconRight={<CustomIcon />}
-      >
-        primary
-      </Button>
+        secondary
+      ></Button>
     </div>
   </>
 );

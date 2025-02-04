@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`hudoro-button 
+      className={`hudoro-button  ${!children ? "no-text" : ""}
       ${bindingClassName(
         size,
         primary,

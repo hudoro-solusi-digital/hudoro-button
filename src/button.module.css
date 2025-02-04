@@ -220,10 +220,14 @@
 }
 
 /* HUORO BUTTON SIZE */
+.hudoro-button.no-text {
+  padding-inline: 0;
+}
 .hudoro-button-xs {
   height: var(--hsd-ui-button-height-xs);
   min-height: var(--hsd-ui-button-height-xs);
   max-height: var(--hsd-ui-button-height-xs);
+  min-width: var(--hsd-ui-button-height-xs);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
   font-size: var(--hsd-ui-button-font-size-xs);
 }
@@ -231,6 +235,7 @@
   height: var(--hsd-ui-button-height-sm);
   min-height: var(--hsd-ui-button-height-sm);
   max-height: var(--hsd-ui-button-height-sm);
+  min-width: var(--hsd-ui-button-height-sm);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
   font-size: var(--hsd-ui-button-font-size-sm);
 }
@@ -238,12 +243,14 @@
   height: var(--hsd-ui-button-height-md);
   min-height: var(--hsd-ui-button-height-md);
   max-height: var(--hsd-ui-button-height-md);
+  min-width: var(--hsd-ui-button-height-md);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
   font-size: var(--hsd-ui-button-font-size-md);
 }
 .hudoro-button-lg {
   min-height: var(--hsd-ui-button-height-lg);
   max-height: var(--hsd-ui-button-height-lg);
+  min-width: var(--hsd-ui-button-height-lg);
   height: var(--hsd-ui-button-height-lg);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
   font-size: var(--hsd-ui-button-font-size-lg);
