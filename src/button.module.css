@@ -245,7 +245,7 @@
   min-height: var(--hsd-ui-button-height-lg);
   max-height: var(--hsd-ui-button-height-lg);
   height: var(--hsd-ui-button-height-lg);
-  padding-inline: var(--hsd-ui-spacing-xl, 24px);
+  padding-inline: var(--hsd-ui-spacing-lg, 16px);
   font-size: var(--hsd-ui-button-font-size-lg);
 }
 
