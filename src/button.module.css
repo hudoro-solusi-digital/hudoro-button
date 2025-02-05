@@ -163,18 +163,6 @@
   --hsd-ui-button-border-radius-lg: var(--hsd-ui-radii-lg, 8px);
   --hsd-ui-button-border-radius-circular: 192px;
 
-  /* spacing */
-  --hsd-ui-button-spacing-xs: var(--hsd-ui-spacing-xs, 4px);
-  --hsd-ui-button-spacing-sm: var(--hsd-ui-spacing-sm, 8px);
-  --hsd-ui-button-spacing-md: var(--hsd-ui-spacing-md, 16px);
-  --hsd-ui-button-spacing-lg: var(--hsd-ui-spacing-lg, 24px);
-
-  /* border */
-  --hsd-ui-button-border-width: var(--hsd-ui-border, 1px);
-
-  /* font weight */
-  --hsd-ui-button-font-weight: var(--hsd-ui-fontWeights-medium, 400);
-
   /* height */
   /* --hsd-ui-button-height-xs: var(--hsd-ui-h-8, 32px); */
   /* --hsd-ui-button-height-sm: var(--hsd-ui-h-9, 36px); */
@@ -184,12 +172,6 @@
   --hsd-ui-button-height-sm: 36px;
   --hsd-ui-button-height-md: 38px;
   --hsd-ui-button-height-lg: 42px;
-
-  /* font size */
-  --hsd-ui-button-font-size-xs: var(--hsd-ui-fontSizes-sm, 12px);
-  --hsd-ui-button-font-size-sm: var(--hsd-ui-fontSizes-md, 14px);
-  --hsd-ui-button-font-size-md: var(--hsd-ui-fontSizes-md, 14px);
-  --hsd-ui-button-font-size-lg: var(--hsd-ui-fontSizes-lg, 16px);
 }
 
 .hudoro-button {
@@ -198,10 +180,10 @@
   transition: 0.2s;
   display: flex;
   align-items: center;
-  gap: var(--hsd-ui-button-spacing-xs);
-  border: var(--hsd-ui-button-border-width) solid;
+  gap: var(--hsd-ui-spacing-xs, 4px);
+  border: var(--hsd-ui-border, 1px) solid;
   font-family: "Poppins", sans-serif;
-  font-weight: var(--hsd-ui-button-font-weight);
+  font-weight: var(--hsd-ui-fontWeights-medium, 400);
   min-width: max-content;
   justify-content: center;
 }
@@ -229,7 +211,7 @@
   max-height: var(--hsd-ui-button-height-xs);
   min-width: var(--hsd-ui-button-height-xs);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
-  font-size: var(--hsd-ui-button-font-size-xs);
+  font-size: var(--hsd-ui-fontSizes-sm, 12px);
 }
 .hudoro-button-sm {
   height: var(--hsd-ui-button-height-sm);
@@ -237,7 +219,7 @@
   max-height: var(--hsd-ui-button-height-sm);
   min-width: var(--hsd-ui-button-height-sm);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
-  font-size: var(--hsd-ui-button-font-size-sm);
+  font-size: var(--hsd-ui-fontSizes-md, 14px);
 }
 .hudoro-button-md {
   height: var(--hsd-ui-button-height-md);
@@ -245,7 +227,7 @@
   max-height: var(--hsd-ui-button-height-md);
   min-width: var(--hsd-ui-button-height-md);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
-  font-size: var(--hsd-ui-button-font-size-md);
+  font-size: var(--hsd-ui-fontSizes-md, 14px);
 }
 .hudoro-button-lg {
   min-height: var(--hsd-ui-button-height-lg);
@@ -253,7 +235,7 @@
   min-width: var(--hsd-ui-button-height-lg);
   height: var(--hsd-ui-button-height-lg);
   padding-inline: var(--hsd-ui-spacing-lg, 16px);
-  font-size: var(--hsd-ui-button-font-size-lg);
+  font-size: var(--hsd-ui-fontSizes-lg, 16px);
 }
 
 /* BUTTON TYPE */
