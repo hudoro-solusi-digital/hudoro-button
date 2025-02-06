@@ -1,6 +1,6 @@
 {
   "name": "@hudoro/button",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Button component for Hudoro UI",
   "author": "Prawito Hudoro",
   "main": "dist/button.umd.js",
@@ -22,25 +22,23 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "devDependencies": {
     "@types/node": "^20.11.5",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.2.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.11",
-    "vite-plugin-dts": "^3.7.1"
-  },
-  "peerDependencies": {
-    "react": ">=17.0.0",
-    "react-dom": ">=17.0.0"
+    "vite-plugin-dts": "^3.7.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }
