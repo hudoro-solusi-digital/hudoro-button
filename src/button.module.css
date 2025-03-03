@@ -160,7 +160,7 @@
   --hsd-ui-text-color-warning-disable: rgb(179, 130, 10);
 
   /* Border radius */
-  --hsd-ui-button-border-radius-lg: var(--hsd-ui-radii-lg, 8px);
+  --hsd-ui-button-border-radius-lg: var(--hsd-ui-radii-md, 8px);
   --hsd-ui-button-border-radius-circular: 192px;
 
   /* height */
