@@ -1,6 +1,6 @@
 {
   "name": "@hudoro/button",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Button component for Hudoro UI",
   "author": "Prawito Hudoro",
   "main": "dist/button.umd.js",
@@ -38,7 +38,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   }
 }
