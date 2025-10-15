@@ -29,6 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
   danger = false,
   warning = false,
   corner = "rounded",
+  variant = "primary",
   ...rest
 }) => {
   return (
@@ -45,7 +46,8 @@ export const Button: React.FC<ButtonProps> = ({
         danger,
         warning,
         corner,
-        fullWidth
+        fullWidth,
+        variant
       )}`}
       {...rest}
       style={{}}
@@ -94,7 +96,8 @@ const bindingClassName = (
   Danger: boolean,
   Warning: boolean,
   Corner: ButtonProps["corner"],
-  FullWidth: Boolean
+  FullWidth: Boolean,
+  Variant: ButtonProps["variant"]
 ) => {
   const allProps = [];
   if (size) {
@@ -117,7 +120,8 @@ const bindingClassName = (
   } else if (Warning) {
     allProps.push(`hudoro-button-warning`);
   } else {
-    allProps.push(`hudoro-button-primary`);
+    // allProps.push(`hudoro-button-primary`);
+    allProps.push(`hudoro-button-${Variant}`);
   }
   if (Corner) {
     allProps.push(`hudoro-button-${Corner.toLowerCase()}`);

@@ -23,15 +23,10 @@ const App = () => (
         flexWrap: "wrap",
       }}
     >
-      <Button
-        size="xs"
-        onClick={() => alert("oke")}
-        iconLeft={<CustomIcon />}
-        secondary
-      >
+      <Button size="xs" onClick={() => alert("oke")} iconLeft={<CustomIcon />}>
         dani ganteng
       </Button>
-      <Button
+      {/* <Button
         size="sm"
         onClick={() => alert("oke")}
         iconLeft={<CustomIcon />}
@@ -48,7 +43,7 @@ const App = () => (
         onClick={() => alert("oke")}
         iconLeft={<CustomIcon />}
         secondary
-      ></Button>
+      ></Button> */}
     </div>
   </>
 );

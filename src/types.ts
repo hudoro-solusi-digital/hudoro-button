@@ -18,4 +18,13 @@ export interface ButtonProps
   fullWidth?: boolean;
   iconLeft?: React.ReactElement<ButtonIconProps>;
   iconRight?: React.ReactElement<ButtonIconProps>;
+  variant?:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "quaternary"
+    | "link"
+    | "success"
+    | "danger"
+    | "warning";
 }
