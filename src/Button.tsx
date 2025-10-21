@@ -30,6 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
   warning = false,
   corner = "rounded",
   variant = "primary",
+  isLoading = false,
   ...rest
 }) => {
   return (
@@ -50,9 +51,10 @@ export const Button: React.FC<ButtonProps> = ({
         variant
       )}`}
       {...rest}
+      disabled={rest.disabled || isLoading}
       style={{}}
     >
-      {iconLeft && (
+      {iconLeft && !isLoading && (
         <>
           {React.cloneElement(iconLeft, {
             width: rederIconWidth(size),
@@ -60,8 +62,17 @@ export const Button: React.FC<ButtonProps> = ({
           })}
         </>
       )}
-      {children}
-      {iconRight && (
+      {isLoading ? (
+        <div
+          className="button-loader"
+          style={{
+            width: rederIconWidth(size),
+            background: "conic-gradient(#0000 10%, #100e0f) content-box",
+          }}
+        />
+      ) : null}
+      {!isLoading ? children : null}
+      {iconRight && !isLoading && (
         <>
           {React.cloneElement(iconRight, {
             width: rederIconWidth(size),

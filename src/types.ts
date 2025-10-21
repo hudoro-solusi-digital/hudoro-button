@@ -27,4 +27,5 @@ export interface ButtonProps
     | "success"
     | "danger"
     | "warning";
+  isLoading?: boolean;
 }
