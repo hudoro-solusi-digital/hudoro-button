@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import dts from 'vite-plugin-dts';
-import path from 'path';
+import {defineConfig} from "vite";
+import react from "@vitejs/plugin-react";
+import dts from "vite-plugin-dts";
+import path from "path";
 
-export default defineConfig(({ command, mode }) => {
-  if (command === 'serve') {
+export default defineConfig(({command, mode}) => {
+  if (command === "serve") {
     // Dev config
     return {
       plugins: [react()],
-      root: path.resolve(__dirname, 'dev'),
+      root: path.resolve(__dirname, "dev"),
       build: {
-        outDir: path.resolve(__dirname, 'dist'),
+        outDir: path.resolve(__dirname, "dist"),
       },
     };
   } else {
@@ -19,21 +19,21 @@ export default defineConfig(({ command, mode }) => {
       plugins: [react(), dts()],
       build: {
         lib: {
-          entry: path.resolve(__dirname, 'src/index.ts'),
-          name: 'Button',
-          formats: ['es', 'umd'],
-          fileName: (format) => `button.${format}.js`
+          entry: path.resolve(__dirname, "src/index.ts"),
+          name: "Button",
+          formats: ["es", "umd"],
+          fileName: (format) => `button.${format}.js`,
         },
         rollupOptions: {
-          external: ['react', 'react-dom'],
+          external: ["react", "react-dom", "react/jsx-runtime"],
           output: {
             globals: {
-              react: 'React',
-              'react-dom': 'ReactDOM'
-            }
-          }
-        }
-      }
+              react: "React",
+              "react-dom": "ReactDOM",
+            },
+          },
+        },
+      },
     };
   }
 });
