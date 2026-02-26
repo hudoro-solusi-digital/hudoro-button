@@ -48,11 +48,11 @@ export const Button: React.FC<ButtonProps> = ({
         warning,
         corner,
         fullWidth,
-        variant
+        variant,
       )}`}
       {...rest}
       disabled={rest.disabled || isLoading}
-      style={{}}
+      // style={{}}
     >
       {iconLeft && !isLoading && (
         <>
@@ -108,7 +108,7 @@ const bindingClassName = (
   Warning: boolean,
   Corner: ButtonProps["corner"],
   FullWidth: Boolean,
-  Variant: ButtonProps["variant"]
+  Variant: ButtonProps["variant"],
 ) => {
   const allProps = [];
   if (size) {

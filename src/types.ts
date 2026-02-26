@@ -3,8 +3,7 @@ export type Variant = "default" | "success" | "danger" | "warning";
 export type Type = "solid" | "outline" | "link";
 export interface ButtonIconProps extends React.SVGProps<SVGSVGElement> {}
 
-export interface ButtonProps
-  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "style"> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size;
   primary?: boolean;
   secondary?: boolean;
